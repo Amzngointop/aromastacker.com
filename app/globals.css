@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F2;
+  --color-sage: #A8B89A;
+  --color-sage-light: #D4E6C3;
+  --color-forest: #3D5A47;
+  --color-beige: #E8E0D0;
+  --color-charcoal: #2C2C2C;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", "DM Sans", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #2C2C2C;
+    font-family: "Inter", "DM Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-body {
+    font-family: "Inter", "DM Sans", sans-serif;
+  }
+  .bg-cream { background-color: #FAF7F2; }
+  .bg-sage { background-color: #A8B89A; }
+  .bg-sage-light { background-color: #D4E6C3; }
+  .bg-forest { background-color: #3D5A47; }
+  .bg-beige { background-color: #E8E0D0; }
+  .text-charcoal { color: #2C2C2C; }
+  .text-forest { color: #3D5A47; }
+  .text-sage { color: #A8B89A; }
+  .border-sage { border-color: #A8B89A; }
+  .border-forest { border-color: #3D5A47; }
+}
+
+/*
+ * Scroll reveal — safe progressive enhancement.
+ * Content is ALWAYS visible by default (opacity: 1, no transform).
+ * The .visible class, added by JS IntersectionObserver, plays a subtle
+ * transform-only entrance animation. Opacity is never touched, so content
+ * remains readable even if JS never fires or fires late.
+ */
+@keyframes revealSlideIn {
+  from { transform: translateY(18px); }
+  to   { transform: translateY(0); }
+}
+
+/* Marker class — no hiding, no opacity change */
+.reveal {
+  /* intentionally empty: content visible by default */
+}
+
+/* Enhancement only: JS adds this class when element enters viewport */
+.reveal.visible {
+  animation: revealSlideIn 0.5s ease-out both;
+}
+
+/* Staggered entrance for sibling groups */
+.reveal-stagger > *:nth-child(1).visible { animation-delay: 0ms; }
+.reveal-stagger > *:nth-child(2).visible { animation-delay: 80ms; }
+.reveal-stagger > *:nth-child(3).visible { animation-delay: 160ms; }
+.reveal-stagger > *:nth-child(4).visible { animation-delay: 240ms; }
+.reveal-stagger > *:nth-child(5).visible { animation-delay: 320ms; }
