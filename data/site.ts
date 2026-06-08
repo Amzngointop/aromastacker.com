@@ -6,7 +6,7 @@ export const site = {
     "Expert guides to scent layering for your home. Discover how to combine diffusers, candles, reed diffusers, and essential oils to craft a signature scent atmosphere in every room.",
   tagline: "Layer Your Home. Craft Your Scent.",
   email: "contact@aromastacker.com",
-  affiliateTag: "YOURTAG-20",
+  affiliateTag: "aromastacker-20",
   locale: "en_US",
   twitterHandle: "@aromastacker",
 };

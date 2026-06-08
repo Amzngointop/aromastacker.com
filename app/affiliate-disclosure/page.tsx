@@ -69,7 +69,7 @@ export default function AffiliateDisclosurePage() {
               <h2 className="font-display text-2xl font-bold text-charcoal mb-4">How to Identify Affiliate Links</h2>
               <p>
                 All product links that direct to Amazon.com are affiliate links. They can be identified by
-                the presence of our affiliate tag (<code className="bg-beige px-2 py-0.5 rounded text-sm font-mono text-forest">YOURTAG-20</code>) in
+                the presence of our affiliate tag (<code className="bg-beige px-2 py-0.5 rounded text-sm font-mono text-forest">aromastacker-20</code>) in
                 the URL. We do not disguise or obscure affiliate links. We also include disclosure notices on
                 every article page where affiliate links appear.
               </p>
