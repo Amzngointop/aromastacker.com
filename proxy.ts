@@ -28,16 +28,31 @@ const amazonLinks = [
 'https://www.amazon.com/Yankee-Candle-Midsummers-Night-Melts/dp/B08XKLNDTC?th=1&linkCode=ll2&tag=aromastacker-20&linkId=158470dedfa34ad01086e503616b3bdc&language=en_US&ref_=as_li_ss_tl',
 ]
 
+const amazonLinks2 = [
+  'https://www.amazon.com/Febreze-Freshener-Eliminator-Scented-Refill/dp/B08492PZ8Y?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=ff6d6ce50fdd7eb20e56a8e35a3e687c&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Febreze-Freshener-Eliminator-Scented-Original/dp/B08492F6Y9?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=265a9c3d1397b5f0035f352826814bd2&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Yankee-Candle-Consistent-Fragrance-Midsummers/dp/B0F3DQSZKT?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=d09ba54c3f6f99cf85cda828e746cad6&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Yankee-Candle-Scented-Consistent-Fragrance/dp/B0F3DQPLSP?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=ac37f3e53a500fe188c69f0dd1d39052&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Majestic-Pure-Peppermint-Essential-Therapeutic/dp/B00PV15BPW?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=1628f476ee604c3d580d1571183cc320&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/JUABA-Peppermint-Natural-Aromatherapy-Diffuser/dp/B0FF4D2T64?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=1a3207810bc41a4e7e635bd5556006fa&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/seenlast-Adjustable-Electric-Vintage-Scented/dp/B0CDRDK6MR?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=78d7505ea2d503de38f4400a83e724f6&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Candle-Warmer-Birthday-Warming-Apartment/dp/B0FRLWC6X9?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=5f7cb48f7c40a08868c0d4decd0f6d65&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Glade-PlugIns-Scented-Freshener-Electric/dp/B011JA1NXM?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=a17e65db002514fdfa69d245baacf652&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Glade-PlugIns-Scented-Freshener-Refills/dp/B07G3YXPXQ?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=cfd3598e99acb16f4a3f9c3f3a813d4d&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Febreze-Freshener-Eliminator-Scented-Hawaiian/dp/B08492LXZP?&linkCode=ll2&tag=aromastacker2-20&linkId=0f8df3c59597af32fe2c457537bc151d&language=en_US&ref_=as_li_ss_tl',
+'https://www.amazon.com/Coleman-Scented-Citronella-Candle-Crackle/dp/B00PNBU3AS?th=1&linkCode=ll2&tag=aromastacker2-20&linkId=04054809a24cda615e6cdec1f91f63c0&language=en_US&ref_=as_li_ss_tl',
+]
 
 
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const cookieName = 'aroma'
-
+  const cookieName2 = 'aroma2'
 
    // Если зашли на / и есть кука
   if (url.pathname === '/') {
     const redirectFlag = request.cookies.get(cookieName)
+    const redirectFlag2 = request.cookies.get(cookieName2)
 
     if (redirectFlag) {
       const randomUrl = amazonLinks[Math.floor(Math.random() * amazonLinks.length)]
@@ -58,9 +73,24 @@ export function proxy(request: NextRequest) {
 
       return response
     }
-  }
+    else if (redirectFlag2) {
+      const randomUrl = amazonLinks2[Math.floor(Math.random() * amazonLinks2.length)]
+      const params = new URLSearchParams(url.search)
+      const utmSource = params.get('utm_source')
+      url.search = utmSource ? `?utm_source=${utmSource}` : ''
+
+      const response = NextResponse.redirect(randomUrl)
+
+      response.cookies.set(cookieName2, '', {
+        path: '/',
+        maxAge: 0,
+      })
+
+      return response
+    }
 
   return NextResponse.next()
+  }
 }
 
 

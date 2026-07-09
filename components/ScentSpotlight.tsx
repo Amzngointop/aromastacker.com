@@ -40,8 +40,14 @@ export default function ScentSpotlight({ items }: Props) {
           ))}
         </div>
 
-        {/* Row 2 — 2 cards centered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:max-w-2xl md:mx-auto">
+        {/* Row 2 — remaining cards centered */}
+        <div
+          className={`grid grid-cols-1 gap-6 mt-6 ${
+            second.length >= 3
+              ? "md:grid-cols-3"
+              : "md:grid-cols-2 md:max-w-2xl md:mx-auto"
+          }`}
+        >
           {second.map(({ product, category }) => (
             <SpotlightCard key={product.id} product={product} category={category} />
           ))}

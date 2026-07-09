@@ -18,6 +18,7 @@ export const nav = [
   { label: "Essential Oils", href: "/best/best-essential-oil-sets" },
   { label: "Reed Diffusers", href: "/best/best-reed-diffusers" },
   { label: "Wax Melts", href: "/best/best-wax-melts-warmers" },
+  { label: "Plug-Ins", href: "/best/best-plug-in-air-fresheners" },
   { label: "Glossary", href: "/glossary" },
   { label: "Contact", href: "/contact" },
 ];
@@ -29,6 +30,7 @@ export const footerLinks = {
     { label: "Best Essential Oils & Sets", href: "/best/best-essential-oil-sets" },
     { label: "Best Reed Diffusers", href: "/best/best-reed-diffusers" },
     { label: "Best Wax Melts & Warmers", href: "/best/best-wax-melts-warmers" },
+    { label: "Best Plug-In Air Fresheners", href: "/best/best-plug-in-air-fresheners" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -69,5 +71,11 @@ export const articleList = [
     title: "Best Wax Melts and Warmers for Scent Layering",
     description:
       "Flameless wax melt systems that let you switch and blend scents on demand with zero commitment.",
+  },
+  {
+    slug: "best-plug-in-air-fresheners",
+    title: "Best Plug-In Air Fresheners for Continuous Home Fragrance",
+    description:
+      "Set-and-forget plug-in warmers and scented oil refills that hold a fresh baseline in every room.",
   },
 ];

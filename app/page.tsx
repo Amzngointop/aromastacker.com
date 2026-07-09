@@ -51,6 +51,7 @@ const articleCategories = [
   "Essential Oils",
   "Reed Diffusers",
   "Wax Melts",
+  "Plug-Ins",
 ];
 
 const categoryLabels: Record<string, string> = {
@@ -59,6 +60,7 @@ const categoryLabels: Record<string, string> = {
   "best-essential-oil-sets": "Essential Oil",
   "best-reed-diffusers": "Reed Diffuser",
   "best-wax-melts-warmers": "Wax Melt",
+  "best-plug-in-air-fresheners": "Plug-In",
 };
 
 const topProducts = [
@@ -67,6 +69,7 @@ const topProducts = [
   "best-essential-oil-sets",
   "best-reed-diffusers",
   "best-wax-melts-warmers",
+  "best-plug-in-air-fresheners",
 ].map((slug) => {
   const article = articles.find((a) => a.slug === slug)!;
   const product = products.find((p) => p.id === article.productIds[0])!;
@@ -506,8 +509,8 @@ export default function HomePage() {
               Expert Buying Guides
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Our editorial team researched the home fragrance market to bring you five comprehensive
-              category guides. Each features five hand-picked products with detailed pros, cons, and
+              Our editorial team researched the home fragrance market to bring you six comprehensive
+              category guides. Each features hand-picked products with detailed pros, cons, and
               scent layering analysis — so you know exactly where each product fits in your stack.
             </p>
           </div>
@@ -541,7 +544,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400 font-medium flex items-center gap-1.5">
                     <BookOpen size={12} />
-                    5 products reviewed
+                    {articles.find((a) => a.slug === article.slug)?.productIds.length ?? 5} products reviewed
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-forest text-sm font-bold group-hover:gap-3 transition-all">
                     Read Guide <ArrowRight size={14} />
@@ -566,7 +569,7 @@ export default function HomePage() {
               Top-Rated Products at a Glance
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              The table below shows the top-ranked product from each of our five buying guides —
+              The table below shows the top-ranked product from each of our six buying guides —
               one pick per category, drawn directly from our reviewed catalog. Use it as a quick
               reference before diving into a full category guide.
             </p>

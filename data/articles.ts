@@ -84,6 +84,9 @@ export const articles: Article[] = [
       "candle-3",
       "candle-4",
       "candle-5",
+      "candle-6",
+      "candle-7",
+      "candle-8",
     ],
     faqs: [
       {
@@ -136,6 +139,8 @@ export const articles: Article[] = [
       "oil-3",
       "oil-4",
       "oil-5",
+      "oil-6",
+      "oil-7",
     ],
     faqs: [
       {
@@ -240,6 +245,8 @@ export const articles: Article[] = [
       "wax-3",
       "wax-4",
       "wax-5",
+      "wax-6",
+      "wax-7",
     ],
     faqs: [
       {
@@ -271,6 +278,58 @@ export const articles: Article[] = [
     relatedSlugs: [
       "best-scented-candles",
       "best-reed-diffusers",
+      "best-scent-diffusers",
+    ],
+  },
+  {
+    slug: "best-plug-in-air-fresheners",
+    title: "Best Plug-In Air Fresheners for Continuous Home Fragrance",
+    metaTitle: "Best Plug-In Air Fresheners (2026 Guide) — AromaStacker",
+    metaDescription:
+      "Compare the top plug-in air freshener warmers and scented oil refills from Febreze and Glade. Analysis of scent profiles, refill longevity, and layering fit.",
+    intro:
+      "Plug-in air fresheners are the most hands-off layer in a home scent system: once installed in an outlet, they release fragrance continuously for weeks with zero attention. In scent layering terms, a plug-in functions as the persistent top-note baseline — the fresh, neutral presence that greets you at the door and holds the space between candle sessions. The warmers and refills below were selected for scent quality, refill longevity, odor-neutralizing performance, and how cleanly their profiles layer under the candles, diffusers, and wax melts you run on top of them.",
+    buyingGuide:
+      "A plug-in system is two purchases: the warmer hardware and the scented oil refills, and the two are brand-locked — Febreze refills only fit Febreze warmers, Glade refills only fit Glade warmers. Choose the ecosystem first, then the scents. For scent selection, neutral profiles like clean linen are the safest layering choice because they rarely conflict with whatever candle or diffuser fragrance runs above them; bolder profiles like tropical florals work better as standalone statements in bathrooms and entryways. Check the intensity control: adjustable warmers let you turn a strong refill down in a small room, which extends refill life considerably. Finally, buy refills in multi-packs — a refill lasts roughly four to seven weeks depending on the setting, so a five-pack covers most of a year on a single outlet.",
+    finalRecommendation:
+      "Start with the Glade PlugIns two-pack warmer as your hardware foundation and keep it stocked with the Clean Linen five-pack refills — that combination delivers the most economical, most layering-friendly passive baseline available. In homes where odor control matters as much as fragrance — kitchens, pet areas, busy bathrooms — Febreze's odor-fighting refills are the stronger choice: Linen & Sky for a neutral profile, Gain Original for a recognizable fresh-laundry signal, and Hawaiian Aloha when you want the plug-in itself to set a playful, tropical mood.",
+    productIds: [
+      "plug-1",
+      "plug-2",
+      "plug-3",
+      "plug-4",
+      "plug-5",
+    ],
+    faqs: [
+      {
+        question: "How long does a plug-in air freshener refill last?",
+        answer:
+          "Most scented oil refills last four to seven weeks on a low warmer setting, and roughly half that at maximum intensity. Glade rates its refills at up to 50 days on low; Febreze's 0.87 oz refills perform in a similar range. Running the warmer on the lowest setting that still scents the room is the single best way to extend refill life.",
+      },
+      {
+        question: "Can I use one brand's refills in another brand's warmer?",
+        answer:
+          "No. Febreze and Glade use physically different bottle and wick designs, and refills are not cross-compatible. Forcing a mismatched refill risks leaks and can damage the warmer. Choose one ecosystem per outlet and stay within it — or run different brands in different rooms if you want scents from both lineups.",
+      },
+      {
+        question: "Do plug-in air fresheners actually eliminate odors or just mask them?",
+        answer:
+          "It depends on the formula. Febreze plug-in refills include the brand's odor-neutralizing technology, which chemically binds odor molecules rather than only covering them. Most standard scented oil refills primarily add fragrance over existing air. For genuinely strong odor sources — litter boxes, trash areas, damp rooms — an odor-fighting formula makes a noticeable difference over a purely decorative scent.",
+      },
+      {
+        question: "How do plug-in air fresheners fit into a scent layering routine?",
+        answer:
+          "Treat the plug-in as your always-on baseline top note. Choose a neutral profile like clean linen for the plug-in, then layer expressive candles, wax melts, or diffuser blends above it during the hours you are home. The plug-in maintains continuity when the active elements are off, so the home never smells of nothing — or worse, of yesterday's cooking.",
+      },
+      {
+        question: "Is it safe to leave plug-in air fresheners on all the time?",
+        answer:
+          "Plug-in warmers from major brands are designed for continuous operation and carry standard electrical safety certifications. Sensible precautions still apply: install them in unobstructed outlets away from curtains and furniture, avoid outlets controlled by damaged wiring, and keep them out of reach of small children who might tamper with the oil bottle. In small, poorly ventilated rooms, run the warmer on its lowest setting.",
+      },
+    ],
+    relatedSlugs: [
+      "best-reed-diffusers",
+      "best-wax-melts-warmers",
       "best-scent-diffusers",
     ],
   },
