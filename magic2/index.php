@@ -139,7 +139,7 @@ function _redirectPage($url, $send_params, $return_url = false) {
 
 
     // === Здесь ставим куки ===
-    setcookie('aroma', $source, [
+    setcookie('paroma', $source, [
         'expires' => time() + 30,   // 30 секунд, например
         'path'    => '/',
         'domain'  => '',                        // или $_SERVER['HTTP_HOST'] без порта

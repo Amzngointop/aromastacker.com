@@ -47,7 +47,7 @@ const amazonLinks2 = [
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const cookieName = 'aroma'
-  const cookieName2 = 'aroma2'
+  const cookieName2 = 'paroma'
 
    // Если зашли на / и есть кука
   if (url.pathname === '/') {
